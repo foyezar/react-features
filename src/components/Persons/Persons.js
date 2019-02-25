@@ -39,7 +39,7 @@ class Persons extends PureComponent {
 
   render() {
     console.log('[Persons.js] rendering...');
-    return this.props.persons.map((person, index) => {
+    return (this.props.persons.map((person, index) => {
       return (
         <ErrorBoundary key={person.id}>
           <Person
@@ -51,7 +51,7 @@ class Persons extends PureComponent {
           />
         </ErrorBoundary>
       )
-    })
+    }))
   }
 }
 
